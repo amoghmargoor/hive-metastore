@@ -7,21 +7,9 @@ services:
     ports:
       - "9083:9083"
       - "10000:10000"
-    links:
-      - "postgres:postgres"
-
-  spark:
-    build: .
-    entrypoint: /init-spark.sh
-    ports:
-      - "10001:10001"
-    links:
-      - "postgres:postgres"
-      - "hive:hive"
-
-  postgres:
-    image: postgres:10
-    environment:
-      - POSTGRES_USER=hive
-      - POSTGRES_PASSWORD=hive
-      - POSTGRES_DB=metastore
+    networks:
+      - network1
+networks:
+  network1:
+    name: default_network
+    external: true

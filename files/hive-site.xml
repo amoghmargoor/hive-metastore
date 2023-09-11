@@ -1,9 +1,5 @@
 <configuration>
   <property>
-    <name>hive.metastore.uris</name>
-    <value>thrift://hive:9083</value>
-  </property>
-  <property>
     <name>hive.metastore.client.socket.timeout</name>
     <value>300</value>
   </property>
@@ -13,16 +9,16 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:postgresql://postgres:5432/metastore</value>
+    <value>jdbc:postgresql://postgres:5432/hivemetastore</value>
     <description>JDBC connect string for a JDBC metastore</description>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
-    <value>hive</value>
+    <value>postgres</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>hive</value>
+    <value>postgres</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionDriverName</name>

@@ -2,7 +2,7 @@
 
 set +ex
 
-$HIVE_HOME/bin/schematool -dbType postgres -initSchema
+#$HIVE_HOME/bin/schematool -dbType postgres -initSchema
 $HIVE_HOME/hcatalog/sbin/hcat_server.sh start &
 
 sleep 10
